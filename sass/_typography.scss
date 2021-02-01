@@ -1,0 +1,16 @@
+$headlineFont: 'Montserrat',
+sans-serif;
+$mainFont:'Source Code Pro',
+monospace;
+
+body {
+    font-family: $mainFont;
+    line-height: 1.5em;
+}
+
+h1,
+h2 {
+    font-family: $headlineFont;
+}
+
+h2 {padding-bottom: 2em;}
