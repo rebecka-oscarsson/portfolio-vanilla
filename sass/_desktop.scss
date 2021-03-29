@@ -17,13 +17,15 @@ body.index {
     grid-template-rows: auto 1fr 15vh;
     grid-template-columns:1fr 2fr;
     height: 100vh;
+    width:80%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 div.ground {
     grid-row: 3/4;
     grid-column: 1/3;
     border-top: 2px solid black;
-    background-image: linear-gradient(black, rgba(2, 8, 8, 0.1), transparent);
     display: block;
 }
 
