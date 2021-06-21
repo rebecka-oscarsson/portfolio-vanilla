@@ -113,69 +113,15 @@ figure {
 nav {
     grid-row: 2/3;
     grid-column: 1/2;
-    justify-self: center;
-    display: grid;
-    text-align: center;
-    grid-template-rows: 184px 1fr 1fr 1fr;
-    grid-template-columns: 1fr 10px 1fr;
-    width: 90%;
-    max-width: 378px;
+    justify-self: center; 
     padding-top: $paddingSmall;
 }
 
-.nav__flowerStalk {
-    grid-row: 2/5;
-    grid-column: 2/3;
-    background-color: white;
-    box-shadow: inset 0px 0px 4px 2px black;
-}
+// ********************************************************************
+//                            Svg (the tree)
+// ********************************************************************
 
-nav {
-    a {
-        display: block;
-        width: 100%;
-        background-image: url('leaf.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+// object{width:100%;
+// height: auto;}
 
-    a:first-child {
-        grid-row: 1/2;
-        grid-column: 1/4;
-        justify-self: center;
-        background-image: url('leaf-up.png');
-        max-height: 184px;
-    }
-
-    a:first-child:hover {
-        background-image: url('leaf-up-hover.png');
-        transition: .5s ease;
-    }
-
-    a:nth-child(2) {
-        grid-row: 2/3;
-        grid-column: 1/2;
-    }
-
-    a:nth-child(3) {
-        grid-row: 2/3;
-        grid-column: 3/4;
-        background-image: url('leaf-right.png');
-    }
-
-    a:nth-child(3):hover {
-        background-image: url('leaf-right-hover.png');
-        transition: .5s ease;
-    }
-
-    a:nth-child(4) {
-        grid-row: 3/4;
-        grid-column: 1/2;
-    }
-
-    a:hover {
-        background-image: url('leaf-hover.png');
-        transition: .5s ease;
-    }
-}
+.leaf {display:none}
