@@ -5,10 +5,17 @@
 
 $paddingSmall:2em;
 $paddingBig:10%;
-$backgroundColor:rgb(167, 164, 196);
+$backgroundColor:ivory;
+$fillColor: rgba(189, 86, 3, 0.3);
+// rgba(154, 205, 50, 0.5);
+$accentColor: rgb(209, 95, 2);
+$discreetColor: rgba(119, 67, 17, 0.6);
+$overlayColor: rgba(255, 255, 255, 0.8);
+// rgb(154, 205, 50);
 
-html {
-    background-color: $backgroundColor;
+html.main-page {
+    background-color: $backgroundColor; //fallback
+    background-image: linear-gradient(to right, $backgroundColor, white 50% , $backgroundColor);
 }
 
 ul {
@@ -16,28 +23,18 @@ ul {
     padding: 0;
 }
 
-a {color:rgb(68, 5, 21);}
-a:hover {color:rgb(184, 33, 33);}
-
 img {width:100%; height:auto; display:block;}
 
 .container {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height:100vh;
+    overflow: hidden;
 }
 
 .showing {
     display: block;
-}
-
-// .hidden {
-//     visibility: hidden;
-// }
-
-div.ground {
-    display: none;
 }
 
 // ********************************************************************
@@ -48,8 +45,15 @@ header {
     grid-row: 1/2;
     grid-column: 1/2;
     padding: $paddingSmall;
-    text-align: center;
 }
+
+.rotate {
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg); 
+  }
 
 // ********************************************************************
 //                            Main
@@ -62,7 +66,6 @@ main {
     border: none;
     position: relative;
     display: none;
-    // overflow: auto;
 }
 
 .main__link-back {
@@ -75,6 +78,8 @@ main {
 }
 
 iframe {
+    background-color: $backgroundColor;
+    background-image: linear-gradient(to right, ivory, white 70%, ivory);
     border: none;
     position: absolute;
     top: 0;
@@ -96,7 +101,7 @@ iframe {
 .subpage__section-portfolio {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 }
 
@@ -105,27 +110,46 @@ figure {
     margin: 0;
 }
 
+figure img {border-radius: 15px;}
+
+.imageText {display:none;}
+
 
 // ********************************************************************
-//                            Nav (the tree)
+//                            Nav
 // ********************************************************************
 
 nav {
     grid-row: 2/3;
     grid-column: 1/2;
-    justify-self: center; 
-    padding-top: $paddingSmall;
+    margin: auto;
+    margin-bottom: 0;
+    display:flex;
+    align-items: flex-end;
+    overflow:hidden;   
 }
 
 // ********************************************************************
 //                            Svg (the tree)
 // ********************************************************************
 
-// object{width:100%;
-// height: auto;}
+object {width:100%;
+height: auto; margin:auto;
+}
+
+// a:hover .details{opacity:0; transition:opacity 0.4s;} fult?
+a {color: $accentColor; text-decoration: none;}
+a:hover .edge {fill:$fillColor; transition:fill 0.4s;}
+.outline {stroke:black; fill:black;}
+.edge {fill: white;}
+
+a:hover > text {
+    -webkit-filter: drop-shadow( 3px 3px 6px $accentColor);
+    filter: drop-shadow( 3px 3px 6px $accentColor);
+  }
+// .extra {display:none;}
+
+iframe a {font-weight: bold;}
 
 
-.details {opacity:0;}
-// .leaf:hover .details{opacity:1;}
-a:hover .details{opacity:1; transition:opacity 0.3s;}
 

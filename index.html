@@ -1,71 +1,42 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js main-page" lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Rebecka Oscarsson's github</title>
+  <title>Rebecka Oscarsson</title>
   <meta name="description" content="I am a front end development student, this is my portfolio webpage">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Rebecka Oscarsson">
-  
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro:wght@600&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Montserrat&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+  <script src="script.js" defer></script>
 </head>
 
 <body class="index">
 
   <div class="container">
 
-    <header>
-      <h1>Rebecka Oscarsson's github</h1>
-    </header>
-   
     <nav>
-      <!-- <a href="about.html" target="iframe">about</a>
-      <a href="portfolio.html" target="iframe">portfolio</a>
-      <a href="skills.html" class="mirror" target="iframe">skills</a>
-      <a href="contact.html" target="iframe">contact</a>
-      <div class="nav__flowerStalk"></div> -->
-      <object data="plant2.svg" type="image/svg+xml">
+      <object data="plant.svg" type="image/svg+xml">
         <!-- <img src="yourfallback.jpg" /> -->
       </object>
     </nav>
-
-    <div class="ground"></div>
-
+    <header>
+      <h1><span class="rotate">Resumé</span>Rebecka Oscarsson</h1>
+    </header>
     <main>
-      <a href class="main__link-back"><span class="fas fa-arrow-circle-left" aria-label="Go back"></span></a>
+
+      <a href class="main__link-back" aria-label="Go back">&#x21A9;</a>
       <!-- lyckades inte komma på ett sätt att få länken att synas även utan css  -->
       <iframe src="about.html" name="iframe" title="main content"></iframe>
     </main>
 
   </div>
-
-  <script>
-    const links = Array.from(document.getElementsByTagName("a"));
-    const iframeWrapper = document.querySelector("main");
-    const nav = document.querySelector("nav");
-    const close = document.querySelector(".main__link-back");
-
-    links.forEach(item => {
-      item.addEventListener("click", showIframe)
-    })
-
-    function showIframe() {
-      iframeWrapper.classList.add("showing");
-    }
-
-    close.addEventListener("click", hideIframe);
-
-    function hideIframe() {
-      iframeWrapper.classList.remove("showing");
-    }
-  </script>
 
 </body>
 

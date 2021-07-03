@@ -1,16 +1,62 @@
-$headlineFont: 'Montserrat',
+$headlineFont: 'Gentium Book Basic',
+serif;
+$mainFont:'Consolas',
+'Montserrat',
 sans-serif;
-$mainFont:'Source Code Pro',
-monospace;
 
 body {
     font-family: $mainFont;
-    line-height: 1.5em;
+}
+
+.subpage__body {
+    line-height: 1.5rem
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1em;
 }
 
 h1,
 h2 {
     font-family: $headlineFont;
+    font-weight: normal;
 }
 
-h2 {padding-bottom: 2em;}
+h2,
+text {
+    font-size: 1.5rem;
+}
+
+h1>span {
+    color: $discreetColor;
+    position: relative;
+    z-index: -1;
+    top: -1.7rem;
+    left: 2.5rem;
+    margin-left:-2.5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+
+.subpage__body a {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 1rem;
+    }
+
+    h2,
+    text,
+    h1>span {
+        font-size: 1.7rem;
+    }
+
+    .subpage__body {
+        line-height: 2rem
+    }
+}
