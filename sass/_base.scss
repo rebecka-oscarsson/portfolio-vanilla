@@ -79,7 +79,7 @@ main {
     // position: -moz-sticky;
     // position: -o-sticky;
     // position: -ms-sticky;
-    display:block;
+    position: relative;
     z-index: 2;
     margin-right: 2rem;
     font-size: 2rem;
