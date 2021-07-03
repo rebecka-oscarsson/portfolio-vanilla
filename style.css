@@ -507,7 +507,6 @@ iframe a {
     grid-row: 2/3;
     grid-column: 2/3;
     display: block;
-    max-width: 1000px;
   }
   iframe {
     background-color: transparent;
@@ -522,6 +521,7 @@ iframe a {
   .subpage__body {
     padding-left: 10%;
     padding-right: 10%;
+    max-width: 800px;
   }
   .subpage__section-portfolio {
     display: flex;
