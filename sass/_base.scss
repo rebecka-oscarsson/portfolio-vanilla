@@ -32,6 +32,7 @@ img {
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -73,11 +74,11 @@ main {
 }
 
 .main__link-back {
-    position: sticky;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky;
-    position: -ms-sticky;
+    // position: sticky;
+    // position: -webkit-sticky;
+    // position: -moz-sticky;
+    // position: -o-sticky;
+    // position: -ms-sticky;
     display:block;
     z-index: 2;
     margin-right: 2rem;
@@ -110,8 +111,6 @@ iframe {
     flex-direction: column;
     align-items: center;
 }
-
-.email {overflow-wrap: break-word;}
 
 .subpage__section-portfolio {
     display: flex;
