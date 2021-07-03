@@ -386,6 +386,7 @@ main {
   border: none;
   position: relative;
   display: none;
+  overflow: auto;
 }
 
 .main__link-back {
