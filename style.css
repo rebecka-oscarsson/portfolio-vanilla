@@ -386,7 +386,8 @@ main {
   border: none;
   position: relative;
   display: none;
-  overflow: scroll;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main__link-back {
@@ -412,11 +413,13 @@ iframe {
 .subpage__body {
   padding-left: 2em;
   padding-right: 2em;
+  overflow-wrap: break-word;
 }
 
 .subpage__section-portfolio {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -595,6 +598,7 @@ h2 {
 h2,
 text {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h1 > span {
