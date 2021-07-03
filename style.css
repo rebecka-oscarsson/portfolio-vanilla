@@ -392,6 +392,9 @@ main {
 
 .main__link-back {
   position: sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
   z-index: 2;
   margin-right: 2rem;
   font-size: 2rem;
@@ -414,6 +417,9 @@ iframe {
   padding-left: 2em;
   padding-right: 2em;
   overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subpage__section-portfolio {
