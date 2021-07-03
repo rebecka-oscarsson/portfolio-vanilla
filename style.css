@@ -582,6 +582,10 @@ h1 {
   line-height: 1em;
 }
 
+a > h1 {
+  color: black;
+}
+
 h1,
 h2 {
   font-family: "Gentium Book Basic", serif;
