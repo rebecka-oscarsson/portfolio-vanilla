@@ -422,6 +422,10 @@ iframe {
   align-items: center;
 }
 
+.email {
+  overflow-wrap: break-word;
+}
+
 .subpage__section-portfolio {
   display: flex;
   flex-flow: column nowrap;

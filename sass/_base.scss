@@ -110,6 +110,8 @@ iframe {
     align-items: center;
 }
 
+.email {overflow-wrap: break-word;}
+
 .subpage__section-portfolio {
     display: flex;
     flex-flow: column nowrap;
@@ -165,14 +167,10 @@ a:hover .edge {
     transition: fill 0.4s;
 }
 
-;
-
 a:active .edge {
     fill: $accentColor;
     transition: fill 0.2s;
 }
-
-;
 
 .outline {
     stroke: black;
@@ -187,8 +185,6 @@ a:hover>text {
     -webkit-filter: drop-shadow(3px 3px 6px $accentColor);
     filter: drop-shadow(3px 3px 6px $accentColor);
 }
-
-// .extra {display:none;}
 
 iframe a {
     font-weight: bold;
