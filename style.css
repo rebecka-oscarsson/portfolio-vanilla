@@ -462,6 +462,11 @@ a:hover .edge {
   transition: fill 0.4s;
 }
 
+a:active .edge {
+  fill: #d15f02;
+  transition: fill 0.2s;
+}
+
 .outline {
   stroke: black;
   fill: black;

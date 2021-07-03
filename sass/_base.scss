@@ -140,9 +140,10 @@ object {width:100%;
 height: auto; margin:auto;
 }
 
-// a:hover .details{opacity:0; transition:opacity 0.4s;} fult?
 a {color: $accentColor; text-decoration: none;}
-a:hover .edge {fill:$fillColor; transition:fill 0.4s;}
+a:hover .edge {fill:$fillColor; transition:fill 0.4s;};
+a:active .edge {fill:$accentColor; transition:fill 0.2s;};
+
 .outline {stroke:black; fill:black;}
 .edge {fill: white;}
 
