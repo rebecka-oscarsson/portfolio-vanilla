@@ -169,9 +169,15 @@ a:hover .edge {
     transition: fill 0.4s;
 }
 
-a:active .edge {
-    fill: $accentColor;
-    transition: fill 0.2s;
+a:active .details, a:visited .details {
+    stroke: $discreetColor;
+    transition: stroke 0.2s;
+}
+
+a:active .outline, a:visited .outline{
+    stroke: $discreetColor;
+    fill: $discreetColor;
+    transition: all 0.2s;
 }
 
 .outline {

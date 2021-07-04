@@ -468,9 +468,15 @@ a:hover .edge {
   transition: fill 0.4s;
 }
 
-a:active .edge {
-  fill: #d15f02;
-  transition: fill 0.2s;
+a:active .details, a:visited .details {
+  stroke: rgba(119, 67, 17, 0.6);
+  transition: stroke 0.2s;
+}
+
+a:active .outline, a:visited .outline {
+  stroke: rgba(119, 67, 17, 0.6);
+  fill: rgba(119, 67, 17, 0.6);
+  transition: all 0.2s;
 }
 
 .outline {

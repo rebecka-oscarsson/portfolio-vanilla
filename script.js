@@ -6,7 +6,19 @@ function getLinks() {
     const svgCode = document.querySelector("object").contentDocument;
     links = Array.from(svgCode.querySelectorAll("a"));
     for (let index = 0; index < links.length; index++) {
-        links[index].addEventListener("click", showIframe);
+        links[index].addEventListener("click", (e) => {
+            // Get a handle to the iframe element
+            let iframe = document.querySelector("iframe");
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            // Check if loading is complete
+            if (iframeDoc.readyState == 'complete') {
+                //iframe.contentWindow.alert("Hello");
+                iframe.contentWindow.onload = function () {
+                    //alert("I am loaded");
+                    showIframe();
+                }
+            }
+        })
     }
 }
 
@@ -15,6 +27,7 @@ const nav = document.querySelector("nav");
 const close = document.querySelector(".main__link-back");
 
 function showIframe() {
+    //här behöver jag kolla när sidan laddat
     iframeWrapper.classList.add("showing");
 }
 
