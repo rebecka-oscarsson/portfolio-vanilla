@@ -13,10 +13,10 @@ function getLinks() {
             // Check if loading is complete
             if (iframeDoc.readyState == 'complete') {
                 //iframe.contentWindow.alert("Hello");
-                iframe.contentWindow.onload = function () {
+                // iframe.contentWindow.onload = function () {
                     //alert("I am loaded");
                     showIframe();
-                }
+                // }
             }
         })
     }
