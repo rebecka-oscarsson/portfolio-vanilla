@@ -1,9 +1,11 @@
 const iframe = document.querySelector("iframe");
 const main = document.querySelector("main");
+const iframeWrapper = document.querySelector("main");
+const nav = document.querySelector("nav");
+const close = document.querySelector(".main__link-back");
 
 var mainDisplay = window.getComputedStyle(main, null).display;
-if (mainDisplay == "none") {iframe.src="";}
-
+if (mainDisplay == "block") {iframe.src="about.html";}
 
 const plant = document.querySelector("object").addEventListener("load", getLinks);
 let links = [];
@@ -15,9 +17,7 @@ function getLinks() {
         links[index].addEventListener("click", ()=>iframeWrapper.classList.add("showing"));}
 }
 
-const iframeWrapper = document.querySelector("main");
-const nav = document.querySelector("nav");
-const close = document.querySelector(".main__link-back");
+
 
 close.addEventListener("click", hideIframe)
 
