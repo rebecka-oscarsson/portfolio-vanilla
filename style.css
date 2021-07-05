@@ -391,7 +391,7 @@ main {
   border: none;
   position: relative;
   display: none;
-  overflow-x: auto;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
