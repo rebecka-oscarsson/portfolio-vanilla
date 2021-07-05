@@ -366,10 +366,6 @@ img {
   display: block;
 }
 
-.hidden {
-  display: none;
-}
-
 header {
   grid-row: 1/2;
   grid-column: 1/2;
