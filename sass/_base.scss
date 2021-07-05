@@ -40,6 +40,10 @@ img {
     display: block;
 }
 
+.hidden {
+    display: none;
+}
+
 // ********************************************************************
 //                            Header
 // ********************************************************************
@@ -69,7 +73,7 @@ main {
     border: none;
     position: relative;
     display: none;
-    overflow: auto;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -169,16 +173,24 @@ a:hover .edge {
     transition: fill 0.4s;
 }
 
-a:active .details, a:visited .details {
+a:visited .details {
     stroke: $discreetColor;
     transition: stroke 0.2s;
 }
 
-a:active .outline, a:visited .outline{
-    stroke: $discreetColor;
-    fill: $discreetColor;
-    transition: all 0.2s;
+a:active text {fill: $accentColor}
+
+
+// a:active .outline, a:visited .outline{
+//     stroke: $discreetColor;
+//     fill: $discreetColor;
+//     transition: all 0.2s;
+// }
+
+a:visited .edge {
+    stroke: black;
 }
+a:active .edge {stroke: $accentColor}
 
 .outline {
     stroke: black;

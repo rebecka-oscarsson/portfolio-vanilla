@@ -366,6 +366,10 @@ img {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   grid-row: 1/2;
   grid-column: 1/2;
@@ -387,7 +391,7 @@ main {
   border: none;
   position: relative;
   display: none;
-  overflow: auto;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -468,15 +472,21 @@ a:hover .edge {
   transition: fill 0.4s;
 }
 
-a:active .details, a:visited .details {
+a:visited .details {
   stroke: rgba(119, 67, 17, 0.6);
   transition: stroke 0.2s;
 }
 
-a:active .outline, a:visited .outline {
-  stroke: rgba(119, 67, 17, 0.6);
-  fill: rgba(119, 67, 17, 0.6);
-  transition: all 0.2s;
+a:active text {
+  fill: #d15f02;
+}
+
+a:visited .edge {
+  stroke: black;
+}
+
+a:active .edge {
+  stroke: #d15f02;
 }
 
 .outline {
