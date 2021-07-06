@@ -14,16 +14,32 @@ function getLinks() {
     const svgCode = document.querySelector("object").contentDocument;
     links = Array.from(svgCode.querySelectorAll("a"));
     for (let index = 0; index < links.length; index++) {
-        links[index].addEventListener("click", ()=>iframeWrapper.classList.add("showing"));}
+        links[index].addEventListener("click", ()=>
+        // nav.classList.add("hidden");
+        {close.classList.remove("hidden");
+        nav.style.height = "0"});}
 }
 
 
+// if(window.event.clientX < 40 && window.event.clientY < 0)  
+//  {  
+//       alert("Browser back button is clicked..."); close.classList.remove("hidden");
+//       nav.style.height = "0" 
+//  }
 
 close.addEventListener("click", hideIframe)
 
 function hideIframe() { 
     // iframe.src="";
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    iframeDoc.querySelector(".subpage__body").setAttribute("id", "hidden");
-    iframeWrapper.classList.remove("showing");
+    // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    // iframeDoc.querySelector(".subpage__body").setAttribute("id", "hidden");
+    // nav.classList.remove("hidden");
+    nav.style.height = "100%";
+    close.classList.add("hidden");
 }
+
+iframe.addEventListener("load", hideNav)
+    function hideNav(){
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.querySelector(".subpage__body").addEventListener("unload", ()=>{nav.classList.add("hidden");})}
+    

@@ -367,7 +367,7 @@ img {
   display: block;
 }
 
-#hidden {
+.hidden {
   display: none;
 }
 
@@ -391,7 +391,7 @@ main {
   text-align: right;
   border: none;
   position: relative;
-  display: none;
+  display: block;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -407,8 +407,6 @@ main {
 }
 
 iframe {
-  background-color: ivory;
-  background-image: linear-gradient(to right, ivory, white 70%, ivory);
   border: none;
   position: absolute;
   top: 0;
@@ -448,6 +446,7 @@ figure img {
 }
 
 nav {
+  z-index: 1;
   grid-row: 2/3;
   grid-column: 1/2;
   margin: auto;
@@ -455,6 +454,9 @@ nav {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  background-color: ivory;
+  background-image: linear-gradient(to right, ivory, white 50%, ivory);
+  transition: 0.5s;
 }
 
 object {

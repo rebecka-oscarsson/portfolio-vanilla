@@ -40,7 +40,7 @@ img {
     display: block;
 }
 
-#hidden {display:none;}
+.hidden {display:none;}
 
 // ********************************************************************
 //                            Header
@@ -70,7 +70,8 @@ main {
     text-align: right;
     border: none;
     position: relative;
-    display: none;
+    // display: none;
+    display:block;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -86,8 +87,8 @@ main {
 }
 
 iframe {
-    background-color: $backgroundColor;
-    background-image: linear-gradient(to right, ivory, white 70%, ivory);
+    // background-color: $backgroundColor;
+    // background-image: linear-gradient(to right, ivory, white 70%, ivory);
     border: none;
     position: absolute;
     top: 0;
@@ -137,6 +138,7 @@ figure img {
 // ********************************************************************
 
 nav {
+    z-index:1;
     grid-row: 2/3;
     grid-column: 1/2;
     margin: auto;
@@ -144,6 +146,9 @@ nav {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    background-color: $backgroundColor; //fallback
+    background-image: linear-gradient(to right, $backgroundColor, white 50%, $backgroundColor);
+    transition: 0.5s;
 }
 
 // ********************************************************************
