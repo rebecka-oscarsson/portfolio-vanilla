@@ -532,6 +532,9 @@ iframe a {
     overflow: hidden;
     width: 30vw;
     padding: 2em 2em 0 10%;
+    background-color: transparent;
+    background-image: none;
+    transition: none;
   }
   header {
     grid-row: 1/2;

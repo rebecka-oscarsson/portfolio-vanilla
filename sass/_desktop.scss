@@ -30,7 +30,10 @@ nav {
     align-items: flex-start;
     overflow:hidden;
     width:30vw;
-    padding:$paddingSmall $paddingSmall 0 $paddingBig;;
+    padding:$paddingSmall $paddingSmall 0 $paddingBig;
+    background-color: transparent;
+    background-image: none;
+    transition: none;
 }
 
 // ********************************************************************
