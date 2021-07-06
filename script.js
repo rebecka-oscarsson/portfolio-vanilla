@@ -21,12 +21,9 @@ function getLinks() {
 
 close.addEventListener("click", hideIframe)
 
-function hideIframe() {
-    
-    
-    iframe.src="";
-    // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    // console.log(iframeDoc);
-    // iframeDoc.querySelector(".subpage__body").classList.add("hidden");
+function hideIframe() { 
+    // iframe.src="";
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    iframeDoc.querySelector(".subpage__body").setAttribute("id", "hidden");
     iframeWrapper.classList.remove("showing");
 }
