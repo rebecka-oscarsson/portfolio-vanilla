@@ -2,15 +2,15 @@ const iframe = document.querySelector("iframe");
 const main = document.querySelector("main");
 const iframeWrapper = document.querySelector("main");
 const nav = document.querySelector("nav");
-const close = document.querySelector(".main__link-back");
-
-var mainDisplay = window.getComputedStyle(main, null).display;
-if (mainDisplay == "block") {
-    iframe.src = "about.html";
-}
-
-const plant = document.querySelector("object").addEventListener("load", getLinks);
+const menuLink = document.querySelector(".main__link-back");
+const plant = document.querySelector("object");
 let links = [];
+plant.addEventListener("load", getLinks);
+
+// var mainDisplay = window.getComputedStyle(main, null).display;
+// if (mainDisplay == "block") {
+//     iframe.src = "about.html";
+// }
 
 function getLinks() {
     const svgCode = document.querySelector("object").contentDocument;
@@ -19,7 +19,7 @@ function getLinks() {
         links[index].addEventListener("click", () =>
             // nav.classList.add("hidden");
             {if (window.matchMedia("(orientation: portrait)").matches)
-                {close.classList.remove("hidden");
+                {menuLink.classList.remove("hidden");
                 nav.style.height = "0"}
             });
     }
@@ -28,19 +28,19 @@ function getLinks() {
 
 // if(window.event.clientX < 40 && window.event.clientY < 0)  
 //  {  
-//       alert("Browser back button is clicked..."); close.classList.remove("hidden");
+//       alert("Browser back button is clicked..."); menuLink.classList.remove("hidden");
 //       nav.style.height = "0" 
 //  }
 
-close.addEventListener("click", hideIframe)
+menuLink.addEventListener("click", showNav)
 
-function hideIframe() {
+function showNav() {//körs på desktop med men gör inget
     // iframe.src="";
     // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     // iframeDoc.querySelector(".subpage__body").setAttribute("id", "hidden");
     // nav.classList.remove("hidden");
     nav.style.height = "100%";
-    close.classList.add("hidden");
+    menuLink.classList.add("hidden");
 }
 
 iframe.addEventListener("load", hideNav)
