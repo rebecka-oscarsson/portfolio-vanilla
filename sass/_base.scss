@@ -36,11 +36,6 @@ img {
     overflow: hidden;
 }
 
-.showing {
-    display: block;
-}
-
-
 
 // ********************************************************************
 //                            Header
@@ -49,7 +44,7 @@ img {
 header {
     grid-row: 1/2;
     grid-column: 1/2;
-    padding: $paddingSmall;
+    padding: $paddingSmall $paddingSmall 0 $paddingSmall;
 }
 
 .rotate {
@@ -78,6 +73,7 @@ main {
 }
 
 .main__link-back {
+    display:inline-flex;
     position: relative;
     z-index: 2;
     margin-right: 2rem;
@@ -85,7 +81,7 @@ main {
     padding: 0.5rem;
     background-color: $backgroundColor;
     border-radius: 10px;
-    display:inline-flex;
+
     flex-direction: column;
     align-items: center;
     font-size: 0.85rem;
@@ -143,64 +139,69 @@ figure img {
     display: none;
 }
 
-
+.showing {display:block}
 // ********************************************************************
 //                            Nav
 // ********************************************************************
 
 nav {
+    // display:inline-flex;
+    display:inline-flex;
     z-index:1;
     grid-row: 2/3;
     grid-column: 1/2;
     margin: auto;
     margin-bottom: 0;
-    display: flex;
-    // height: 0;
-    width:100%;
+    height: 100%;
+    width: 100%;
     align-items: flex-end;
+    justify-content: flex-end;
+    align-content: flex-end;
+    justify-items: flex-end;
     overflow: hidden;
     background-color: $backgroundColor; //fallback
     background-image: linear-gradient(to right, $backgroundColor, white 50%, $backgroundColor);
-    transition: 0.5s;
+    transition: 0.8s;
 }
+
+
 
 // ********************************************************************
 //                            Svg (the tree)
 // ********************************************************************
 
+
+
 object {
     width: 90%;
     height: auto;
-    margin: auto;
+    margin: auto auto 0 auto;
+    transition: 1s;
+    display: block;
 }
+
+.menuClicked {height: 0};
 
 a {
     color: $accentColor;
     text-decoration: none;
 }
 
-a:hover .edge {
-    fill: $fillColor;
-    transition: fill 0.4s;
+a text {
+    fill: black;
+    color: black;
 }
 
-a:visited .details {
+a:visited text{
+    fill: $discreetColor;
+}
+
+a:visited .details, a:visited .midnerve {
     stroke: $discreetColor;
-    transition: stroke 0.2s;
 }
 
 a:active text {fill: $accentColor}
 
-
-// a:active .outline, a:visited .outline{
-//     stroke: $discreetColor;
-//     fill: $discreetColor;
-//     transition: all 0.2s;
-// }
-
-a:visited .edge {
-    stroke: black;
-}
 a:active .edge {stroke: $accentColor}
 
 .outline {
@@ -217,8 +218,15 @@ a:hover>text {
     filter: drop-shadow(3px 3px 6px $accentColor);
 }
 
+
+a:hover .edge {fill: $fillColor; transition: fill 0.4s;} //fallback
+a:hover .edge {fill: url("#gradient");}
+
 iframe a {
     font-weight: bold;
 }
 
 .hidden {display:none;}
+
+svg {display: block;};
+

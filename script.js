@@ -15,13 +15,14 @@ plant.addEventListener("load", getLinks);
 function getLinks() {
     const svgCode = document.querySelector("object").contentDocument;
     links = Array.from(svgCode.querySelectorAll("a"));
+    // menuLink.classList.remove("hidden");
     for (let index = 0; index < links.length; index++) {
-        links[index].addEventListener("click", () =>
-            // nav.classList.add("hidden");
-            {if (window.matchMedia("(orientation: portrait)").matches)
-                {menuLink.classList.remove("hidden");
-                nav.style.height = "0"}
-            });
+        links[index].addEventListener("click", (e) => {
+            console.log(e.target);
+            if (window.matchMedia("(orientation: portrait)").matches) {
+                menuLink.classList.remove("hidden");
+            }
+        });
     }
 }
 
@@ -34,23 +35,23 @@ function getLinks() {
 
 menuLink.addEventListener("click", showNav)
 
-function showNav() {//körs på desktop med men gör inget
-    // iframe.src="";
-    // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    // iframeDoc.querySelector(".subpage__body").setAttribute("id", "hidden");
-    // nav.classList.remove("hidden");
-    nav.style.height = "100%";
+function showNav() { //körs på desktop men där animeras det ej
+    nav.classList.remove("menuClicked");
     menuLink.classList.add("hidden");
+    iframe.classList.add("hidden");
 }
 
-iframe.addEventListener("load", hideNav)
+iframe.addEventListener("load", hideNav) //på desktop är menuClicked 100%
+// iframe.addEventListener("hashchange", showNav)
+
 
 function hideNav() {
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    let stil = window.getComputedStyle(nav, null).getPropertyValue("background-color");
-    
-    if (window.matchMedia("(orientation: landscape)").matches) {
-        iframeDoc.querySelector(".subpage__body").addEventListener("unload", () => {
-            nav.classList.add("hidden");
-        })
-    }}
+    iframe.classList.remove("hidden");
+    // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    // plant.classList.add("menuClicked");
+    nav.classList.add("menuClicked");
+    // iframe.onhashchange = showNav()
+    // iframeDoc.querySelector(".subpage__body").addEventListener("unload", () => {
+    //     nav.classList.remove("menuClicked");
+    // })//funkar bara på första, skulle visa nav men det är nog fel tänkt
+}
