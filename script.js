@@ -43,6 +43,7 @@ function showNav() { //körs på desktop men där animeras det ej
 
 iframe.addEventListener("load", hideNav) //på desktop är menuClicked 100%
 // iframe.addEventListener("hashchange", showNav)
+if(!iframe.src && nav.classList.contains("menuClicked")) {menuLink.classList.add("hidden");}
 
 
 function hideNav() {
@@ -53,5 +54,6 @@ function hideNav() {
     // iframe.onhashchange = showNav()
     iframeDoc.querySelector(".subpage__body").addEventListener("unload", () => {
         nav.classList.remove("menuClicked");
+        menuLink.classList.remove("hidden");
     })//funkar bara på första, skulle visa nav men det är nog fel tänkt
 }
