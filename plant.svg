@@ -4,8 +4,8 @@
   <defs>
   
   <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="10%" style="stop-color:rgba(189, 86, 3, 0.3);stop-opacity:1" />
-      <stop offset="100%" style="stop-color:rgba(119, 67, 17, 0.6);stop-opacity:1" />
+      <stop offset="10%" style="stop-color:rgba(189, 86, 3, 0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(114, 33, 1, 0.6);stop-opacity:1" />
     </linearGradient>
     </defs>
     <a target="iframe" transform="translate(-2.0203 3.0305)" xlink:href="about.html">

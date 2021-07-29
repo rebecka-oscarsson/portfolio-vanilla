@@ -7,7 +7,7 @@ $paddingBig:10%;
 $backgroundColor:ivory;
 $fillColor: rgba(189, 86, 3, 0.3);
 $accentColor: rgb(209, 95, 2);
-$discreetColor: rgba(119, 67, 17, 0.6);
+$discreetColor: rgba(114, 33, 1, 0.6);
 $overlayColor: rgba(255, 255, 255, 0.8);
 
 html.main-page {
@@ -140,12 +140,12 @@ figure img {
 }
 
 .showing {display:block}
+
 // ********************************************************************
 //                            Nav
 // ********************************************************************
 
 nav {
-    // display:inline-flex;
     display:inline-flex;
     z-index:1;
     grid-row: 2/3;
@@ -161,7 +161,7 @@ nav {
     overflow: hidden;
     background-color: $backgroundColor; //fallback
     background-image: linear-gradient(to right, $backgroundColor, white 50%, $backgroundColor);
-    transition: 0.8s;
+    transition: height 0.8s;
 }
 
 

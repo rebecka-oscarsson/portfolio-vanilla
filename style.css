@@ -473,7 +473,7 @@ nav {
   overflow: hidden;
   background-color: ivory;
   background-image: linear-gradient(to right, ivory, white 50%, ivory);
-  transition: 0.8s;
+  transition: height 0.8s;
 }
 
 object {
@@ -499,11 +499,11 @@ a text {
 }
 
 a:visited text {
-  fill: rgba(119, 67, 17, 0.6);
+  fill: rgba(114, 33, 1, 0.6);
 }
 
 a:visited .details, a:visited .midnerve {
-  stroke: rgba(119, 67, 17, 0.6);
+  stroke: rgba(114, 33, 1, 0.6);
 }
 
 a:active text {
@@ -686,7 +686,7 @@ text {
 }
 
 h1 > span {
-  color: rgba(119, 67, 17, 0.6);
+  color: rgba(114, 33, 1, 0.6);
   position: relative;
   z-index: -1;
   top: -1.7rem;

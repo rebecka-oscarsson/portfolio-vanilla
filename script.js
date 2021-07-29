@@ -7,10 +7,14 @@ const plant = document.querySelector("object");
 let links = [];
 plant.addEventListener("load", getLinks);
 
-// var mainDisplay = window.getComputedStyle(main, null).display;
-// if (mainDisplay == "block") {
-//     iframe.src = "about.html";
-// }
+window.addEventListener("resize", function() {
+	if (window.matchMedia("(orientation: portrait)").matches && nav.classList.contains("menuClicked"))
+	{menuLink.classList.remove("hidden")}
+}, false); //hindrar menylänken från att försvinna när man byter skärmläge
+
+if (window.matchMedia("(orientation: landscape)").matches ) {
+    iframe.src="about.html"
+ }
 
 function getLinks() {
     const svgCode = document.querySelector("object").contentDocument;
