@@ -51,7 +51,7 @@ function hideNav() {
     // plant.classList.add("menuClicked");
     nav.classList.add("menuClicked");
     // iframe.onhashchange = showNav()
-    // iframeDoc.querySelector(".subpage__body").addEventListener("unload", () => {
-    //     nav.classList.remove("menuClicked");
-    // })//funkar bara på första, skulle visa nav men det är nog fel tänkt
+    iframeDoc.querySelector(".subpage__body").addEventListener("unload", () => {
+        nav.classList.remove("menuClicked");
+    })//funkar bara på första, skulle visa nav men det är nog fel tänkt
 }
