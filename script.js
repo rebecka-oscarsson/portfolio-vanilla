@@ -47,7 +47,7 @@ iframe.addEventListener("load", hideNav) //på desktop är menuClicked 100%
 
 function hideNav() {
     iframe.classList.remove("hidden");
-    // const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     // plant.classList.add("menuClicked");
     nav.classList.add("menuClicked");
     // iframe.onhashchange = showNav()
