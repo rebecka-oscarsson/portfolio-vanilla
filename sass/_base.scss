@@ -9,6 +9,7 @@ $fillColor: rgba(189, 86, 3, 0.3);
 $accentColor: rgb(209, 95, 2);
 $discreetColor: rgba(114, 33, 1, 0.6);
 $overlayColor: rgba(255, 255, 255, 0.8);
+$plantColor: rgba(114, 1, 86, 0.6);
 
 html.main-page {
     background-color: $backgroundColor; //fallback
@@ -65,7 +66,6 @@ main {
     text-align: right;
     border: none;
     position: relative;
-    // display: none;
     display:block;
     max-width:100%;
     overflow-y: auto;
@@ -196,7 +196,7 @@ a:visited text{
     fill: $discreetColor;
 }
 
-a:visited .details, a:visited .midnerve {
+a:visited .details {
     stroke: $discreetColor;
 }
 
@@ -218,7 +218,7 @@ a:hover>text {
     filter: drop-shadow(3px 3px 6px $accentColor);
 }
 
-
+a:hover .midnerve {fill: plum}
 a:hover .edge {fill: $fillColor; transition: fill 0.4s;} //fallback
 a:hover .edge {fill: url("#gradient");}
 

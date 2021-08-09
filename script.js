@@ -22,7 +22,6 @@ function getLinks() {
     // menuLink.classList.remove("hidden");
     for (let index = 0; index < links.length; index++) {
         links[index].addEventListener("click", (e) => {
-            console.log(e.target);
             if (window.matchMedia("(orientation: portrait)").matches) {
                 menuLink.classList.remove("hidden");
             }
