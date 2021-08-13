@@ -466,14 +466,17 @@ nav {
   margin-bottom: 0;
   height: 100%;
   width: 100%;
-  align-items: flex-end;
-  justify-content: flex-end;
-  align-content: flex-end;
-  justify-items: flex-end;
   overflow: hidden;
   background-color: ivory;
   background-image: linear-gradient(to right, ivory, white 50%, ivory);
   transition: height 0.8s;
+}
+
+.ie-nav-fallback {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 50vh auto;
+  line-height: 3em;
 }
 
 object {

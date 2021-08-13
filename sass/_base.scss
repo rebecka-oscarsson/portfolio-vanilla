@@ -90,8 +90,6 @@ main {
 .main__link-back i {font-size: 2rem;}
 
 iframe {
-    // background-color: $backgroundColor;
-    // background-image: linear-gradient(to right, ivory, white 70%, ivory);
     border: none;
     position: absolute;
     top: 0;
@@ -154,17 +152,13 @@ nav {
     margin-bottom: 0;
     height: 100%;
     width: 100%;
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-content: flex-end;
-    justify-items: flex-end;
     overflow: hidden;
     background-color: $backgroundColor; //fallback
     background-image: linear-gradient(to right, $backgroundColor, white 50%, $backgroundColor);
     transition: height 0.8s;
 }
 
-
+.ie-nav-fallback {display:flex; flex-direction:column; margin: auto auto 50vh auto; line-height: 3em;}
 
 // ********************************************************************
 //                            Svg (the tree)
